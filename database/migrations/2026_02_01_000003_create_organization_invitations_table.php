@@ -20,7 +20,7 @@ return new class() extends Migration
             $table->foreignId('invited_by')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamp('accepted_at')->nullable();
             $table->timestamp('declined_at')->nullable();
-            $table->timestamp('expires_at');
+            $table->timestamp('expires_at')->nullable();
             $table->timestamps();
 
             $table->unique(['organization_id', 'email']);
